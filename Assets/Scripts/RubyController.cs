@@ -19,7 +19,7 @@ public class RubyController : MonoBehaviour
     void Update()
     {
         Vector2 position = transform.position;
-        position += moveSpeed * moveAction.ReadValue<Vector2>();
+        position += moveSpeed * Time.deltaTime * moveAction.ReadValue<Vector2>();
         transform.position = position;
     }
 }
