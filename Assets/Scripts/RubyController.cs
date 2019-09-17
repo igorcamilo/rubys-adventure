@@ -5,12 +5,14 @@ using UnityEngine.InputSystem;
 
 public class RubyController : MonoBehaviour
 {
+    private Rigidbody2D rigidbody;
     private InputAction moveAction;
-    public float moveSpeed = 0.01f;
+    public float moveSpeed = 3f;
 
     // Start is called before the first frame update
     void Start()
     {
+        rigidbody = GetComponent<Rigidbody2D>();
         var input = GetComponent<PlayerInput>();
         moveAction = input.actions.FindAction("Move");
     }
@@ -18,8 +20,8 @@ public class RubyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector2 position = transform.position;
+        Vector2 position = rigidbody.position;
         position += moveSpeed * Time.deltaTime * moveAction.ReadValue<Vector2>();
-        transform.position = position;
+        rigidbody.MovePosition(position);
     }
 }
