@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 790331711578110793}
   - component: {fileID: 7409033994939363339}
   - component: {fileID: 7162698818901495120}
+  - component: {fileID: 652519302450683176}
   m_Layer: 0
   m_Name: Ruby
   m_TagString: Untagged
@@ -98,6 +99,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 3
+  maxHealth: 5
+  timeInvincible: 2
 --- !u!114 &790331711578110793
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -120,6 +123,63 @@ MonoBehaviour:
   m_DeviceRegainedEvent:
     m_PersistentCalls:
       m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 53b39826-f53c-4fcc-987f-0428f8b9daf8
+    m_ActionName: Player/Move[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d,/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 5ada36ff-b2db-43dd-8c57-b8a3b8368541
+    m_ActionName: Player/Look
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: a2e7a494-8b58-49ee-bdb3-f48d7da7342a
+    m_ActionName: Player/Fire[/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 56778423-c5a5-442a-a195-5e3008928ea9
+    m_ActionName: UI/Navigate
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 582fdcc6-a03b-418a-bb1d-153081f51eeb
+    m_ActionName: UI/Submit
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 52de351e-a8e4-4601-8285-105e90ce78e0
+    m_ActionName: UI/Cancel[/Keyboard/escape]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 84b36449-5cd2-4bc9-91c9-889b42752776
+    m_ActionName: UI/Point[/Mouse/position]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 9fb62360-1d91-4acb-b251-02b0d8f93f02
+    m_ActionName: UI/Click[/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 3eb2a898-d7ae-4a6b-a2d4-7fa1acfbbc76
+    m_ActionName: UI/ScrollWheel[/Mouse/scroll]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: d1f66762-acc7-4cb3-aae9-58c2e19343db
+    m_ActionName: UI/MiddleClick[/Mouse/middleButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 445f7d5a-945f-471a-abdd-cffbdbe3f5ab
+    m_ActionName: UI/RightClick[/Mouse/rightButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 16e22ec3-c652-41e3-b55a-7566feb40bfd
+    m_ActionName: UI/TrackedDevicePosition
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 6ae1879e-37a9-44a7-9586-466b5f6eecd7
+    m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 2068781f-2c4b-48e4-94c3-a52189dc90fa
+    m_ActionName: UI/TrackedDeviceSelect
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: 4958d7f5-b05d-4947-8169-c1bdf6259f1a
@@ -172,3 +232,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.38955572, y: 0.24366355}
   m_EdgeRadius: 0
+--- !u!95 &652519302450683176
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 790331711578110805}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b77822e0485373d40b5beb92e9a5e728, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
